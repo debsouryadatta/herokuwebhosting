@@ -4,6 +4,8 @@
 // IMP Point--> If we use express,then we should use pug or else it will show error(And we know we require express for posting process,so pug is must)
 // IMP Point--> To make the photos visible on website,we must keep the photos on the static folder & the css file also.
 
+// IMP Point-->"const port = process.env.PORT || 8000;" Extra thing which we have to add for heroku
+
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
@@ -11,7 +13,7 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/contactDance', {useNewUrlParser: true, useUnifiedTopology: true});
 const bodyparser=require("body-parser")
-const port = 80;
+const port = process.env.PORT || 8000;
 
 // Define Mongoose Schema
 const contactSchema = new mongoose.Schema({
