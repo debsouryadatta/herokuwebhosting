@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+
+
+/* Navbar */
+.navbar{
+    display: flex;
+    background-color: aquamarine;
+    height:6rem ;
+}
+ul{
+    display: flex;
+    list-style: none;
+    border: 2px solid red;
+    width: 165rem;
+    justify-content: space-evenly;
+}
+ul li a{
+    text-decoration: none;
+    border: 2px solid black;
+    background-color:white;
+    color: rgb(0, 0, 0);
+    border-radius: 2rem;
+    position: relative;
+    top: 2rem;
+    margin-top: 0px;
+    padding: .6rem 1.4rem;
+    background-color: white;
+    font-size: 1.5rem;
+}
+#logo img{
+    height: 8rem;
+    width: 11rem;
+    border: 2px solid red;
+}
+
+/* Home */
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    height: 60rem;
+}
+h2{
+    text-align: center;
+    border: 2px solid red;
+    font-size: 4.5rem;
+}
+#home p{
+    border: 2px solid red;
+    font-size: 2rem;
+}
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('/apnikaksha.jpg') no-repeat center center/cover;
+    height: 66rem;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.5;
+}
+
+/* Last */
+.last{
+    display: flex;
+}
+#login{
+  border: 2px solid yellow;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 28rem;
+}
+h3{
+    font-size: 3.5rem;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin:0rem 0rem ;
+    padding: 0rem 0rem;
+    font-size: 6rem;
+}
+button{
+    border-radius:0.6rem ;
+    padding: 0rem 9rem;
+}
+#about{
+    border: 2px solid green;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dp img{
+    height: 22rem;
+    width: 25rem;
+}
+#about p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+
+
+/* Media Queries */
+@media(max-width:998px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+}
+@media(max-width:450px){
+    ul li a{
+        text-decoration: none;
+        border: 2px solid black;
+        background-color:white;
+        color: rgb(0, 0, 0);
+        border-radius: 2rem;
+        position: relative;
+        top: 2rem;
+        margin-top: 0px;
+        padding: .6rem 1.4rem;
+        background-color: white;
+        font-size: 1.2rem;
+    }
+    #logo img{
+        height: 6rem;
+        width: 7rem;
+        border: 2px solid red;
+    }
+}
