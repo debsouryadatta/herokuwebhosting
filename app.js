@@ -4,7 +4,7 @@
 // IMP Point--> If we use express,then we should use pug or else it will show error(And we know we require express for posting process,so pug is must)
 // IMP Point--> To make the photos visible on website,we must keep the photos on the static folder & the css file also.
 
-// IMP Point-->"const port = process.env.PORT || 8000;" Extra thing which we have to add for heroku
+// IMP Point-->"const port = process.env.PORT || 8000;" Extra thing which we have to add for heroku and ("start": "node app.js" Extra typing for Heroku in package.json)
 
 const express = require("express");
 const path = require("path");
