@@ -5,7 +5,7 @@
 // IMP Point--> To make the photos visible on website,we must keep the photos on the static folder & the css file also.
 
 // IMP Point-->"const port = process.env.PORT || 8000;" Extra thing which we have to add for heroku and ("start": "node app.js" Extra typing for Heroku in package.json)
-
+// "test": "echo \"Error: no test specified\" && exit 1",
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
