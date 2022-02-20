@@ -39,11 +39,11 @@ app.set('view engine', 'pug') // Set the template engine as pug
 app.set('views', path.join(__dirname, 'views')) // Set the views directory
  
 // ENDPOINTS
-app.get('/', (req, res)=>{
+app.get('https://tempneel.herokuapp.com/', (req, res)=>{
     res.status(200).render('index.pug');
 })
 
-app.post('/', (req, res)=>{
+app.post('https://tempneel.herokuapp.com/', (req, res)=>{
     var myData = new Contact(req.body);
     myData.save().then(()=>{
     res.send("This item has been saved to the database")
