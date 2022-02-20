@@ -47,6 +47,6 @@ app.post('/', (req, res)=>{
 })
 
 // START THE SERVER
-app.listen(port, ()=>{
+app.listen(process.env.PORT ||8000 , ()=>{
     console.log(`The application started successfully on port ${port}`);
 });
