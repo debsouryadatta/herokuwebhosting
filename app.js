@@ -16,8 +16,18 @@ const app = express();
 const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost:27017/contactDance', {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connect(
-  "mongodb+srv://neel:lovecoding!@neel.msafs.mongodb.net/contactDance?retryWrites=true&w=majority", 
+  'mongodb+srv://neel:lovecoding!@neel.msafs.mongodb.net/contactDance?retryWrites=true&w=majority', 
   {useNewUrlParser: true, useUnifiedTopology: true});
+  // const DB = 'mongodb+srv://neel:lovecoding!@neel.msafs.mongodb.net/contactDance?retryWrites=true&w=majority';
+  // mongoose.connect(DB, {
+  //   useNewUrlParser:true,
+  //   useCreateIndex:true,
+  //   useUnifiedTopology:true,
+  //   useFindAndModify:false
+  // } ).then(() =>{
+  //   console.log(`connection successfulf`)
+  // } )
+
 const bodyparser=require("body-parser")
 const port = process.env.PORT || 8000;
 
@@ -43,7 +53,7 @@ app.get('https://tempneel.herokuapp.com/', (req, res)=>{
     res.status(200).render('index.pug');
 })
 
-app.post('https://tempneel.herokuapp.com/', (req, res)=>{
+app.post('/', (req, res)=>{
     var myData = new Contact(req.body);
     myData.save().then(()=>{
     res.send("This item has been saved to the database")
