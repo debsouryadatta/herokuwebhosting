@@ -6,12 +6,18 @@
 
 // IMP Point-->"const port = process.env.PORT || 8000;" Extra thing which we have to add for heroku and ("start": "node app.js" Extra typing for Heroku in package.json)
 // "test": "echo \"Error: no test specified\" && exit 1",
+
+// mongodb+srv://neel:lovecoding!@neel.msafs.mongodb.net/test(ATLAS)
+
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/contactDance', {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect('mongodb://localhost:27017/contactDance', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(
+  "mongodb+srv://neel:lovecoding!@neel.msafs.mongodb.net/contactDance?retryWrites=true&w=majority", 
+  {useNewUrlParser: true, useUnifiedTopology: true});
 const bodyparser=require("body-parser")
 const port = process.env.PORT || 8000;
 
